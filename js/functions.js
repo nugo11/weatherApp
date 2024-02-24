@@ -113,6 +113,7 @@ export function openLocations() {
     selectloc.style.left = "50%";
     selectloc.style.height = "70vh";
     selectloc.style.width = "30%";
+    selectloc.style.display = "block";
   });
   closemodal.addEventListener("click", () => {
     selectloc.style.bottom = "-100%";
