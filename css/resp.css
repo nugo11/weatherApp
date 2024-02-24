@@ -1,0 +1,25 @@
+@media (width > 850px) {
+    ::-webkit-scrollbar {
+        height: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.068);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.644);
+      }
+    #sevendays li {
+        padding: 40px;
+    }
+
+    .detinfo p {
+        width: 10vw;
+    }
+
+    #selectloc {
+        width: 25vw;
+    }
+}
+
