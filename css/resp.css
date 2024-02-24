@@ -1,25 +1,50 @@
-@media (width > 850px) {
-    ::-webkit-scrollbar {
-        height: 10px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.068);
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.644);
-      }
-    #sevendays li {
-        padding: 40px;
-    }
+@media (width < 1000px) {
+ body {
+  flex-direction: column;
+ }
 
-    .detinfo p {
-        width: 10vw;
-    }
+ .header {
+  height: 40%;
+  padding: 30px;
+  width: 100%;
+ }
 
-    #selectloc {
-        width: 25vw;
-    }
+ .footer {
+  overflow-y: scroll;
+  height: 60%;
+  width: 100%;
+  justify-content: normal;
+  gap: 20px;
+  padding: 150px;
+  border-left: none;
+  border-top: 5px solid rgba(255, 255, 255, 0.14);
+ }
+
+ .searcharea {
+  display: none;
+ }
+
+ .changeloc {
+  margin-top: 20px;
+ }
+
+ #selectloc {
+  width: 50% !important;
+ }
+
+ #box1 {
+  height: 300px;
+ }
+
+ .headmob {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ #forcedisplayblock {
+  display: block !important;
+  width: 40%;
+  margin: 0;
+ }
 }
 

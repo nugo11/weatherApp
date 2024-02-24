@@ -3,7 +3,6 @@ import {
   currentForecast,
   formatDate,
   getWeekDays,
-  horScroll,
   hourlyFrocest,
   openLocations,
   sevenDayForecast,
@@ -22,7 +21,6 @@ function changeGetCity(city) {
       hourlyFrocest(data);
       openLocations();
       formatDate();
-      horScroll();
     });
 }
 
@@ -45,24 +43,28 @@ for (let i = 0; i < getCityFromLi.length; i++) {
 
   getCityFromLi[i].addEventListener("click", () => {
     changeGetCity(getCity);
-    let firstweekdaydegmin =
-      document.getElementsByClassName("firstweekdaydegmin");
-      let footer = document.getElementsByClassName("footer")[0];
-    let moredetails = document.getElementsByClassName("moredetails")[0];
-    let lessdetails = document.getElementsByClassName("lessdetails")[0];
-      for (let u = 0; u < firstweekdaydegmin.length; u++) {
-      moredetails.style.display = "block";
-      lessdetails.style.display = "none";
-      footer.removeAttribute('style');
-      let remcreatedetInfo = document.getElementsByClassName("detinfo");
-      for( let p = 0; p < remcreatedetInfo.length; p++) {
-        remcreatedetInfo[p].remove();
-      }
-    }
     let currentCity = document.getElementById("currentCity");
     currentCity.textContent = getCityFromLi[i].textContent;
     let selectloc = document.getElementById("selectloc");
     selectloc.style.bottom = "-100%";
     selectloc.style.height = "0";
   });
+
 }
+let subbuticon = document.getElementById('subbuticon');
+let searchInput = document.querySelectorAll('input');
+for(let p = 0; p < searchInput.length; p++) {
+  subbuticon.addEventListener('click', () => {
+    let currentCity = document.getElementById("currentCity");
+      currentCity.textContent = searchInput[p].value.charAt(0).toUpperCase() + searchInput[p].value.slice(1);
+    changeGetCity(searchInput[p].value);
+  })
+  searchInput[p].addEventListener('keypress', (event) => {
+    if(event.key === 'Enter') {
+      let currentCity = document.getElementById("currentCity");
+        currentCity.textContent = searchInput[p].value.charAt(0).toUpperCase() + searchInput[p].value.slice(1);
+      changeGetCity(searchInput[p].value);
+    }
+  })
+}
+

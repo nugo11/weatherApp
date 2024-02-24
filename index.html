@@ -16,73 +16,96 @@
   </head>
   <body>
     <div class="header">
-      <h1 id="currentCity">Tbilisi</h1>
-      <p id="degree">--°</p>
-      <ul id="minforflex">
-        <img src="./img/icon.png" width="38px" id="mineimage" />
-        <p id="weathertype">---</p>
-      </ul>
-      <p id="formattedDate">---, 00 -----</p>
+      <div class="headmob">
+      <div class="logo"></div>
+      <div class="searcharea" id="forcedisplayblock" style="display: none;">
+        <input type="text" placeholder="Search Location..." id="searchInput" />
+        <button id="subbuticon"></button>
+      </div>
     </div>
-    <div class="housimg"></div>
+      <div class="divheadonesec">
+        <p id="degree">--°</p>
+        <ul id="minforflex">
+          <h1 id="currentCity">Tbilisi</h1>
+          <p id="formattedDate">---, 00 -----</p>
+        </ul>
+        <img src="./img/icon.png" width="70px" height="70px" id="mineimage" />
+      </div>
+    </div>
     <div class="footer">
+      <div class="searcharea">
+        <input type="text" placeholder="Search Location..." id="searchInput" />
+        <button id="subbuticon"></button>
+      </div>
+      <button class="changeloc">Choose City</button>
+      <div class="currentweatherdetails">
+        <h1>Weather Details...</h1>
+        <ul id="currentdetails">
+          <h1>thunderstorm with light drizzle</h1>
+          <li><p>Temp max</p> <ul class="insideul"><span id="curmax">--°</span><img src="./img/tmax.png" alt=""></ul></li>
+          <li><p>Temp min</p> <ul class="insideul"><span id="curmin">--°</span><img src="./img/tmin.png" alt=""></ul></li>
+          <li><p>Humadity</p> <ul class="insideul"><span id="hum">--°</span><img src="./img/hum.png" alt=""></ul></li>
+          <li><p>Cloudy</p> <ul class="insideul"><span id="clou">--°</span><img src="./img/cloud.png" alt=""></ul></li>
+          <li><p>Wind</p> <ul class="insideul"><span id="win">--°</span><img src="./img/wind.png" alt=""></ul></li>
+        </ul>
+      </div>
       <ul id="headnav">
         <li id="sevendayclick">7 days</li>
         <li id="hourlyclick">Hourly</li>
       </ul>
-      <div id="box1" style="display: block">
+      <div id="box1">
         <ul id="sevendays">
           <li class="li-in-box1">
-            <p class="firstweekday">---</p>
             <img src="./img/icon.png" class="firstweekdayicon" alt="" />
-            <ul id="flexdeg"> 
-              <p class="firstweekdaydegmin">19°</p>
-              <p class="firstweekdaydegmax">19°</p>
-            </ul>
-          </li>
-          <li class="li-in-box1">
             <p class="firstweekday">---</p>
-            <img src="./img/icon.png" class="firstweekdayicon" alt="" />
             <ul id="flexdeg">
               <p class="firstweekdaydegmin">19°</p>
               <p class="firstweekdaydegmax">19°</p>
             </ul>
           </li>
           <li class="li-in-box1">
-            <p class="firstweekday">---</p>
             <img src="./img/icon.png" class="firstweekdayicon" alt="" />
+            <p class="firstweekday">---</p>
             <ul id="flexdeg">
               <p class="firstweekdaydegmin">19°</p>
               <p class="firstweekdaydegmax">19°</p>
             </ul>
           </li>
           <li class="li-in-box1">
-            <p class="firstweekday">---</p>
             <img src="./img/icon.png" class="firstweekdayicon" alt="" />
+            <p class="firstweekday">---</p>
             <ul id="flexdeg">
               <p class="firstweekdaydegmin">19°</p>
               <p class="firstweekdaydegmax">19°</p>
             </ul>
           </li>
           <li class="li-in-box1">
-            <p class="firstweekday">---</p>
             <img src="./img/icon.png" class="firstweekdayicon" alt="" />
+            <p class="firstweekday">---</p>
             <ul id="flexdeg">
               <p class="firstweekdaydegmin">19°</p>
               <p class="firstweekdaydegmax">19°</p>
             </ul>
           </li>
           <li class="li-in-box1">
-            <p class="firstweekday">---</p>
             <img src="./img/icon.png" class="firstweekdayicon" alt="" />
+            <p class="firstweekday">---</p>
             <ul id="flexdeg">
               <p class="firstweekdaydegmin">19°</p>
               <p class="firstweekdaydegmax">19°</p>
             </ul>
           </li>
           <li class="li-in-box1">
-            <p class="firstweekday">---</p>
             <img src="./img/icon.png" class="firstweekdayicon" alt="" />
+            <p class="firstweekday">---</p>
+            <ul id="flexdeg">
+              <p class="firstweekdaydegmin">19°</p>
+              <p class="firstweekdaydegmax">19°</p>
+            </ul>
+          </li>
+          <li class="li-in-box1">
+            <img src="./img/icon.png" class="firstweekdayicon" alt="" />
+            <p class="firstweekday">---</p>
             <ul id="flexdeg">
               <p class="firstweekdaydegmin">19°</p>
               <p class="firstweekdaydegmax">19°</p>
@@ -92,184 +115,178 @@
       </div>
       <div id="box12" style="display: none">
         <ul id="sevendays">
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
-          <li class='hourli'>
-            <p class="hourfor">00:00</p>
+          <li class="hourli">
             <img src="./img/icon.png" class="firstweekdayiconhour" alt="" />
+            <p class="hourfor">00:00</p>
             <ul id="flexdeg">
               <p class="firstweekdaydeghour">19°</p>
             </ul>
           </li>
         </ul>
       </div>
-      <div class="box2">
-        <div class="changeloc"></div>
-        <div class="moredetails" style="display:block">Show more</div>
-        <div class="lessdetails" style="display:none">Show less</div>
-        <div class="navvigation"></div>
-      </div>
     </div>
-    
+
     <div id="selectloc">
       <ul id="forrelative">
         <span id="closemodal">X</span>
@@ -286,7 +303,7 @@
         <li class="city">Davit-Gareji</li>
         <li class="city">Zestafoni</li>
         <li class="city">Zugdidi</li>
-        <li class="city" style="font-weight:600;">Tbilisi</li>
+        <li class="city" style="font-weight: 600">Tbilisi</li>
         <li class="city">Telav</li>
         <li class="city">Tianeti</li>
         <li class="city">Lagodekh</li>
