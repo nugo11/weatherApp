@@ -48,3 +48,21 @@
  }
 }
 
+@media (width < 1000px) { 
+  .footer {
+    padding: 50px;
+  }
+
+  #forcedisplayblock {
+    width: 50%;
+  }
+
+  #currentCity {
+    font-size: 40px;
+  }
+
+  #degree {
+    font-size: 80px !important;
+  }
+}
+
