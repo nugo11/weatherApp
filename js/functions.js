@@ -17,10 +17,12 @@ export function currentForecast(getData) {
   let hum = document.getElementById("mineimage");
   let clou = document.getElementById("clou");
   let win = document.getElementById("win");
+  let h1current = document.getElementById("h1current");
 
   MineTemp.textContent = `${Math.floor(getData.current.temp_c)}°`;
   mineimage.src = getData.current.condition.icon;
   mineimage.alt = getData.current.condition.text;
+  h1current.textContent = getData.current.condition.text;
   curmax.textContent = getData.forecast.forecastday[0].day.maxtemp_c;
   curmin.textContent = getData.forecast.forecastday[0].day.mintemp_c;
   hum.textContent = getData.current.humidity;
