@@ -49,22 +49,22 @@ for (let i = 0; i < getCityFromLi.length; i++) {
     selectloc.style.bottom = "-100%";
     selectloc.style.height = "0";
   });
-
 }
-let subbuticon = document.getElementById('subbuticon');
-let searchInput = document.querySelectorAll('input');
-for(let p = 0; p < searchInput.length; p++) {
-  subbuticon.addEventListener('click', () => {
+let subbuticon = document.getElementById("subbuticon");
+let searchInput = document.querySelectorAll("input");
+for (let p = 0; p < searchInput.length; p++) {
+  subbuticon.addEventListener("click", () => {
     let currentCity = document.getElementById("currentCity");
-      currentCity.textContent = searchInput[p].value.charAt(0).toUpperCase() + searchInput[p].value.slice(1);
+    currentCity.textContent =
+      searchInput[p].value;
     changeGetCity(searchInput[p].value);
-  })
-  searchInput[p].addEventListener('keypress', (event) => {
-    if(event.key === 'Enter') {
+  });
+  searchInput[p].addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
       let currentCity = document.getElementById("currentCity");
-        currentCity.textContent = searchInput[p].value.charAt(0).toUpperCase() + searchInput[p].value.slice(1);
+      currentCity.textContent =
+        searchInput[p].value;
       changeGetCity(searchInput[p].value);
     }
-  })
+  });
 }
-
