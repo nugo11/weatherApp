@@ -56,14 +56,16 @@ for (let p = 0; p < searchInput.length; p++) {
   subbuticon.addEventListener("click", () => {
     let currentCity = document.getElementById("currentCity");
     currentCity.textContent =
-      searchInput[p].value;
+      searchInput[p].value.charAt(0).toUpperCase() +
+      searchInput[p].value.slice(1);
     changeGetCity(searchInput[p].value);
   });
   searchInput[p].addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       let currentCity = document.getElementById("currentCity");
       currentCity.textContent =
-        searchInput[p].value;
+        searchInput[p].value.charAt(0).toUpperCase() +
+        searchInput[p].value.slice(1);
       changeGetCity(searchInput[p].value);
     }
   });
