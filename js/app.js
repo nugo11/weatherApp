@@ -50,7 +50,7 @@ for (let i = 0; i < getCityFromLi.length; i++) {
     selectloc.style.height = "0";
   });
 }
-let subbuticon = document.querySelectorAll("#git subbuticon");
+let subbuticon = document.querySelectorAll("#subbuticon");
 let searchInput = document.querySelectorAll("input");
 for (let p = 0; p < searchInput.length; p++) {
   subbuticon[p].addEventListener("click", () => {
