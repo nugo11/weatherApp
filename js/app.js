@@ -48,6 +48,19 @@ for (let i = 0; i < getCityFromLi.length; i++) {
     let selectloc = document.getElementById("selectloc");
     selectloc.style.bottom = "-100%";
     selectloc.style.height = "0";
+    function myFunction1(x) {
+      if (x.matches) { 
+        selectloc.style.display  = "none";
+      } 
+    }
+    
+    var xx = window.matchMedia("(max-width: 1000px)")
+    
+    myFunction1(xx);
+    
+    xx.addEventListener("change", function() {
+      myFunction1(xx);
+    });
   });
 }
 let subbuticon = document.querySelectorAll("#subbuticon");
