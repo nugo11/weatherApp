@@ -72,3 +72,15 @@ for (let p = 0; p < searchInput.length; p++) {
     }
   });
 }
+
+let selectloc = document.getElementById("selectloc");
+
+function myFunction(x) {
+  if (x.matches) { 
+    selectloc.style.display  = "none";
+  } 
+}
+
+var x = window.matchMedia("(max-width: 1000px)")
+
+myFunction(x);

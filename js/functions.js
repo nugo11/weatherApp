@@ -113,11 +113,36 @@ export function openLocations() {
     selectloc.style.left = "50%";
     selectloc.style.height = "70vh";
     selectloc.style.width = "30%";
-    selectloc.style.display = "block";
+    function myFunction(x) {
+      if (x.matches) { 
+        selectloc.style.display  = "block";
+      } 
+    }
+    
+    var x = window.matchMedia("(max-width: 1000px)")
+    
+    myFunction(x);
+    
+    x.addEventListener("change", function() {
+      myFunction(x);
+    });
   });
   closemodal.addEventListener("click", () => {
     selectloc.style.bottom = "-100%";
     selectloc.style.height = "0";
+    function myFunction1(x) {
+      if (x.matches) { 
+        selectloc.style.display  = "none";
+      } 
+    }
+    
+    var xx = window.matchMedia("(max-width: 1000px)")
+    
+    myFunction1(xx);
+    
+    xx.addEventListener("change", function() {
+      myFunction1(xx);
+    });
   });
 }
 
